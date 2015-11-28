@@ -1,5 +1,3 @@
-
-#import select
 import socket, json, threading, time
 
 
@@ -38,14 +36,7 @@ class Headset(object):
                         try:
                             self.parse_payload(c)
                         except:
-                            #self.sock.sendall('{"enableRawOutput":true,"format":"Json"}')
                             print(c)
-
-                #except (select.error, OSError):
-                #    break
-                #except serial.SerialException:
-                #    s.close()
-                #    break
 
         def parse_payload(self, payload):
             """Parse the payload to determine an action."""
